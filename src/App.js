@@ -1,5 +1,9 @@
+import { race } from "./controller/raceController.js";
+
 class App {
-  async run() {}
+  async run() {
+    await race();
+  }
 }
 
 export default App;
