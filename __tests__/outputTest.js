@@ -1,4 +1,4 @@
-import { formatPositions, formatWinners } from "../src/output/outputRace";
+import { formatPositions, formatWinners } from "../src/output/output";
 
 describe("formatPositions 함수 테스트", () => {
   test("자동차 이름과 위치를 '-'로 표시한다", () => {
