@@ -17,4 +17,8 @@ export const validateCarNameNotEmpty = (carName) => {
   }
 };
 
-export const validateCarCount = (cars) => {};
+export const validateCarCount = (cars) => {
+  if (cars.length === 1) {
+    throw new Error("[ERROR] 자동차는 n개가 입력되어야 합니다.");
+  }
+};

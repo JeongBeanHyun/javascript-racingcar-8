@@ -24,7 +24,7 @@ describe("자동차 이름 예외 테스트", () => {
   });
 
   test("자동차 이름 1개만 입력했을 경우 예외 발생", () => {
-    const carName = "jb";
+    const carName = ["jb"];
 
     expect(() => validateCarCount(carName)).toThrow(
       "[ERROR] 자동차는 n개가 입력되어야 합니다."
