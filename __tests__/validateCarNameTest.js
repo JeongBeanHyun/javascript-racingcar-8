@@ -32,11 +32,12 @@ describe("자동차 이름 예외 테스트", () => {
     );
   });
 
-  test("자동차 입력을 쉼표가 아닌 다른 구분자로 입력했을 경우 예외 발생", () => {
-    const carName = "jb|hh";
-
-    expect(() => validateSeparator(carName)).toThrow(
-      "[ERROR] 구분자는 쉼표(,)만 가능합니다."
-    );
-  });
+  test.each(["jb|hh", "jj:gb", "hu;tt", "jb,ju:ou"])(
+    "자동차 입력을 쉼표가 아닌 다른 구분자로 입력했을 경우 예외 발생",
+    (carName) => {
+      expect(() => validateSeparator(carName)).toThrow(
+        "[ERROR] 구분자는 쉼표(,)만 가능합니다."
+      );
+    }
+  );
 });

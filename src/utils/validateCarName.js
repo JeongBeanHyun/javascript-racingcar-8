@@ -4,7 +4,12 @@ export const validateCarNameLength = (carName) => {
   }
 };
 
-export const validateSeparator = (carNames) => {};
+export const validateSeparator = (carNames) => {
+  const hasOtherSeparator = /[:;|]/.test(carNames);
+  if (hasOtherSeparator) {
+    throw new Error("[ERROR] 구분자는 쉼표(,)만 가능합니다.");
+  }
+};
 
 export const validateCarNameNotEmpty = (carName) => {};
 
