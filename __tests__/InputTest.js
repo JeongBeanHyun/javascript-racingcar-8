@@ -29,6 +29,6 @@ describe("입력 테스트", () => {
 
     const input = await inputRaceCount();
 
-    expect(input).toBe("5");
+    expect(input).toBe(5);
   });
 });
