@@ -4,6 +4,10 @@ export const validateNotZero = (count) => {
   }
 };
 
-export const validateIsNumber = (count) => {};
+export const validateIsNumber = (count) => {
+  if (isNaN(count) || typeof count !== "number") {
+    throw new Error("[ERROR] 시도할 횟수는 숫자만 가능합니다.");
+  }
+};
 
 export const validatePositiveInteger = (count) => {};
