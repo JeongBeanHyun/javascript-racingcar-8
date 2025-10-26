@@ -10,4 +10,8 @@ export const validateIsNumber = (count) => {
   }
 };
 
-export const validatePositiveInteger = (count) => {};
+export const validatePositiveInteger = (count) => {
+  if (count < 0 || !Number.isInteger(count)) {
+    throw new Error("[ERROR] 시도할 횟수는 양의 정수만 가능합니다.");
+  }
+};
