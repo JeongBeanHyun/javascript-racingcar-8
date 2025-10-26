@@ -17,8 +17,7 @@ describe("자동차 이름 예외 테스트", () => {
   });
 
   test("자동차 이름이 빈 이름일 경우 예외 발생", () => {
-    const carName = ",";
-
+    const carName = "";
     expect(() => validateCarNameNotEmpty(carName)).toThrow(
       "[ERROR] 자동차 이름을 입력해주세요."
     );

@@ -11,6 +11,10 @@ export const validateSeparator = (carNames) => {
   }
 };
 
-export const validateCarNameNotEmpty = (carName) => {};
+export const validateCarNameNotEmpty = (carName) => {
+  if (carName.length === 0) {
+    throw new Error("[ERROR] 자동차 이름을 입력해주세요.");
+  }
+};
 
 export const validateCarCount = (cars) => {};
